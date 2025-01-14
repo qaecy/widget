@@ -90,6 +90,9 @@ Try one of the following:
 * `Show info on door type D01`
 * `What companies are in the project`
 
+![image](https://github.com/user-attachments/assets/0d860032-1589-4fab-b07d-12d4eeceb25a)
+
+
 ### Auth
 
 #### Providers
