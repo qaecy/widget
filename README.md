@@ -6,7 +6,9 @@ QAECY Widget for integration in any host app. This widget app can be used in any
 This section describes how you set up the widget in your app.
 
 ### Hello widget
-In the head of your html load the qaecy widget web app from `https://cdn.jsdelivr.net/gh/qaecy/widget@<VERSION>/main.js`. This allows you to use the `<qaecy-widget>` HTML tag in the body of your app. You also need to import the Poppins font and Google Material icons.
+In the head of your html load the qaecy widget web app from `https://cdn.jsdelivr.net/gh/qaecy/widget@<VERSION>/main.js`. The version parameter is optional but recommended in production. If you don't specify a version, the latest will be used (ex `https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.2/main.js` or `https://cdn.jsdelivr.net/gh/qaecy/widget/main.js`). 
+
+Wit the script loaded you can use the `<qaecy-widget>` HTML tag in the body of your app. You also need to import the Poppins font and Google Material icons.
 
 The widget will automatically fit the size of its parent, so we will put it in a 300x500px div.
 
@@ -24,7 +26,7 @@ Example:
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
     <!-- QAECY widget -->
-    <script src="https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.1/main.js" type="module" ></script>
+    <script src="https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.2/main.js" type="module" ></script>
 
     <title>QAECY widget test</title>
     <style>
