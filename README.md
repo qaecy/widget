@@ -48,6 +48,22 @@ You should now see the widget with a message specifying that a config is needed.
 
 ![image](https://github.com/user-attachments/assets/6ee9049c-ae2e-4c7d-b714-d07f30d13b72)
 
+### Demo mode
+In order to just get an impression of what the widget offers you can run it in demo mode. This mode is toggled by setting the demo attribute to true (`<qaecy-widget demo="true"></qaecy-widget>`). In demo mode the widget can only simulate some pre defined questions.
+
+![image](https://github.com/user-attachments/assets/557af6f4-20a0-4186-b26e-797f2b51c347)
+
+Try one of the following:
+
+* `List files`
+* `Show architectural model`
+* `Show info on door type D01`
+* `What companies are in the project`
+
+![image](https://github.com/user-attachments/assets/0d860032-1589-4fab-b07d-12d4eeceb25a)
+
+### Setup
+
 The widget needs to be fully intitalized before the options can be set. We use this hack to set the options as soon as the widget is ready.
 
 To get an API key, APP id etc. reach out to QAECY.
@@ -85,20 +101,6 @@ To get an API key, APP id etc. reach out to QAECY.
 Now you should see this:
 
 ![image](https://github.com/user-attachments/assets/ba3d0cdf-878f-4619-b9ca-c43d48e731a5)
-
-### Demo mode
-If the demo attribute is set to true (`<qaecy-widget demo="true"></qaecy-widget>`) the widget runs in a demo mode where you can simulate some pre defined questions.
-
-![image](https://github.com/user-attachments/assets/557af6f4-20a0-4186-b26e-797f2b51c347)
-
-Try one of the following:
-
-* `List files`
-* `Show architectural model`
-* `Show info on door type D01`
-* `What companies are in the project`
-
-![image](https://github.com/user-attachments/assets/0d860032-1589-4fab-b07d-12d4eeceb25a)
 
 
 ### Auth
