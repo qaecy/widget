@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.conditional.min.css">
   <link rel="stylesheet" href="styles.css"></head>
   <body>
-    <div style="width: 300px; height: 500px; border: 1px solid; margin: 50px" id="container">
-      <qaecy-widget dark="true" pid="8ca75584-1814-4db5-b88e-6e8ac9140ad6"></qaecy-widget>
+    <div style="width: 300px; height: 500px; border: 1px solid; margin: 50px;" id="container">
+      <qaecy-widget dark="true" scale="small" pid="8ca75584-1814-4db5-b88e-6e8ac9140ad6"></qaecy-widget>
       <section class="pico" style="margin-top: 20px">
         <p>Widget settings</p>
 
@@ -43,6 +43,16 @@
           <input id="menuAlwaysOn" name="menuAlwaysOn" type="checkbox" role="switch">
           Menu always on
         </label>
+
+        <!-- Scale -->
+        <details class="dropdown" id="scale">
+          <summary>scale</summary>
+          <ul>
+            <li data-value="small">small</li>
+            <li data-value="medium">medium</li>
+            <li data-value="large">large</li>
+          </ul>
+        </details>
 
         <!-- Mode -->
         <details class="dropdown" id="mode">
@@ -263,6 +273,17 @@
         widget.options(options);
       });
 
+      const scaleDropdown = document.getElementById("scale");
+      scaleDropdown.addEventListener("click", (event) => {
+        if (event.target.tagName === "LI") {
+          const selectedOption = event.target.dataset.value;
+          widget.setAttribute("scale", selectedOption);
+
+          // Close the dropdown after selection (optional)
+          scaleDropdown.removeAttribute("open");
+        }
+      });
+
       const modeDropdown = document.getElementById("mode");
       modeDropdown.addEventListener("click", (event) => {
         if (event.target.tagName === "LI") {
@@ -280,5 +301,5 @@
         }
       });
     </script>
-  <link rel="modulepreload" href="chunk-N24HKWBP.js"><link rel="modulepreload" href="chunk-26WL5TWN.js"><link rel="modulepreload" href="chunk-QEBCTBUI.js"><link rel="modulepreload" href="chunk-Z3OELFSR.js"><link rel="modulepreload" href="chunk-VEDCF245.js"><link rel="modulepreload" href="chunk-4VVVYF6L.js"><link rel="modulepreload" href="chunk-PY4BY7WK.js"><link rel="modulepreload" href="chunk-2H5I36RE.js"><link rel="modulepreload" href="chunk-B4RPBFY2.js"><link rel="modulepreload" href="chunk-IDVTS5NN.js"><script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
+  <link rel="modulepreload" href="chunk-74GSK2UP.js"><link rel="modulepreload" href="chunk-MQKCRQHU.js"><link rel="modulepreload" href="chunk-QEBCTBUI.js"><link rel="modulepreload" href="chunk-UNKLUZVL.js"><link rel="modulepreload" href="chunk-VEDCF245.js"><link rel="modulepreload" href="chunk-6GDG4PDN.js"><link rel="modulepreload" href="chunk-QK5VUW5Z.js"><link rel="modulepreload" href="chunk-RP6GSRQV.js"><link rel="modulepreload" href="chunk-22TYSVVA.js"><link rel="modulepreload" href="chunk-PIYCZUTI.js"><script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script></body>
 </html>
