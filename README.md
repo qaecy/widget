@@ -137,6 +137,31 @@ widget.addEventListener('sync', async (ev) => {
 })
 ```
 
+The file data model is as follows:
+```typescript
+interface QaecyFileI {
+  iri: string;
+  relativePath: string;
+  created: string;
+  modified: string;
+  createdBy: QaecyUserI;
+  modifiedBy: QaecyUserI;
+  size: number;
+  name: string;
+  data: (iri: string) => Promise<Uint8Array>;
+}
+```
+
+The data parameter takes an async callback that returns a Uint8Array. An example callback for fetching a document could look like this:
+
+```typescript
+const data: async (iri) => {
+    const fetched = await fetch(iri);
+    const buffer = await fetched.arrayBuffer();
+    return new Uint8Array(buffer);
+}
+```
+
 #### List Organization Members
 When the listOrganizationMembers event is fired the host application should provide a list of organization members. Example:
 
