@@ -38,6 +38,12 @@
           Demo mode
         </label>
 
+        <!-- FAB mode -->
+        <label>
+          <input id="fabMode" name="fabMode" type="checkbox" role="switch">
+          FAB mode
+        </label>
+
         <!-- Menu always on? -->
         <label>
           <input id="menuAlwaysOn" name="menuAlwaysOn" type="checkbox" role="switch">
@@ -122,6 +128,11 @@
         menuAlwaysVisible: false,
         menuOptions: ["ASSISTANT", "SYNC_OVERVIEW", "SIGN_OUT"],
         hostApp: "SharePoint",
+        fab: {
+          borderRadius: '1rem',
+          chatWidth: '300px',
+          chatHeight: '70vh'
+        }
       };
 
       const dummyMembers = [
@@ -293,6 +304,16 @@
         widget.setAttribute("demo", demoModeSwitch.checked);
       });
 
+      const fabModeSwitch = document.getElementById("fabMode");
+      fabModeSwitch.addEventListener("change", () => {
+        widget.setAttribute("fab", fabModeSwitch.checked);
+        if(fabModeSwitch.checked){
+          container.style.height = "0";
+        }else{
+          container.style.height = "500px";
+        }
+      });
+
       const menuAlwaysOnSwitch = document.getElementById("menuAlwaysOn");
       menuAlwaysOnSwitch.addEventListener("change", () => {
         options.menuAlwaysVisible = menuAlwaysOnSwitch.checked;
@@ -327,5 +348,5 @@
         }
       });
     </script>
-  <link rel="modulepreload" href="chunk-SWAJMDVE.js"><link rel="modulepreload" href="chunk-RCKKKM7H.js"><link rel="modulepreload" href="chunk-KVOAQQQH.js"><link rel="modulepreload" href="chunk-2YILYGTH.js"><link rel="modulepreload" href="chunk-A2LSBBSI.js"><link rel="modulepreload" href="chunk-PPMTCHN6.js"><link rel="modulepreload" href="chunk-6ALTK2MW.js"><link rel="modulepreload" href="chunk-53MWK3MQ.js"><link rel="modulepreload" href="chunk-EST3HM3H.js"><link rel="modulepreload" href="chunk-22TYSVVA.js"><script src="main.js" type="module"></script></body>
+  <link rel="modulepreload" href="chunk-TK4COPYE.js"><link rel="modulepreload" href="chunk-QVP6XWK7.js"><link rel="modulepreload" href="chunk-KVOAQQQH.js"><link rel="modulepreload" href="chunk-EGDO5M6S.js"><link rel="modulepreload" href="chunk-A2LSBBSI.js"><link rel="modulepreload" href="chunk-X3ENXARM.js"><link rel="modulepreload" href="chunk-MUMJ3BXW.js"><link rel="modulepreload" href="chunk-PUFVZIXS.js"><link rel="modulepreload" href="chunk-4Y2QYWHA.js"><link rel="modulepreload" href="chunk-22TYSVVA.js"><script src="main.js" type="module"></script></body>
 </html>
