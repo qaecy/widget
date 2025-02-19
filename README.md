@@ -1,12 +1,20 @@
-# QAECY widget
-QAECY Widget for integration in any host app. This widget app can be used in any 3rd party app as a [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components).
+# Cue by QAECY
+
+Cue is QAECY's agent for the AEC industry. It's a simple [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) widget that can be easily integrated into any host application.
+
+The widget can either be integrated so it fills a host DOM element or it can be integrated as a Floating Action Button (FAB) that rests in one of the corners of the host app.
+
+<img width="310" alt="image" src="https://github.com/user-attachments/assets/859ac756-6b09-41e2-8f1d-b59ee2e9d1c0" />
+<img width="511" alt="image" src="https://github.com/user-attachments/assets/d99dc313-5866-4b8e-9ea1-f7e137169ae7" />
+
+
 
 ## Use
 
 This section describes how you set up the widget in your app.
 
 ### Hello widget
-In the head of your html load the qaecy widget web app from `https://cdn.jsdelivr.net/gh/qaecy/widget@<VERSION>/main.js`. The version parameter is optional but recommended in production. If you don't specify a version, the latest will be used (ex `https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.2/main.js` or `https://cdn.jsdelivr.net/gh/qaecy/widget/main.js`). 
+In the head of your html load the qaecy widget web app from `https://cdn.jsdelivr.net/gh/qaecy/widget@<VERSION>/main.js`. The version parameter is optional but recommended in production. If you don't specify a version, the latest will be used (ex `https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.18/main.js` or `https://cdn.jsdelivr.net/gh/qaecy/widget/main.js`). 
 
 Wit the script loaded you can use the `<qaecy-widget>` HTML tag in the body of your app. You also need to import the Poppins font and Google Material icons.
 
@@ -26,7 +34,7 @@ Example:
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
     <!-- QAECY widget -->
-    <script src="https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.2/main.js" type="module" ></script>
+    <script src="https://cdn.jsdelivr.net/gh/qaecy/widget@v0.0.18/main.js" type="module" ></script>
 
     <title>QAECY widget test</title>
     <style>
